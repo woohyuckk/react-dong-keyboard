@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // 최신 JS 출력 (tsup이 변환해줌)
+    "module": "ESNext", // ESM 기반 모듈 출력
+    "declaration": true, // 타입 파일(.d.ts) 생성
+    "declarationDir": "dist/types", // 타입 출력 디렉토리
+    "outDir": "dist", // tsup도 이 경로로 출력
+    "jsx": "react-jsx", // React 17+ JSX 지원
+    "moduleResolution": "bundler", // tsup과 호환 (Node16도 가능)
+    "esModuleInterop": true, // CommonJS 호환 import 허용
+    "skipLibCheck": true, // 외부 타입 검사 생략
+    "strict": true, // 엄격한 타입 검사
+    "allowSyntheticDefaultImports": true, // default import 허용 (ESM 호환)
+    "resolveJsonModule": true, // JSON import 가능
+    "isolatedModules": true, // 타입만 존재해도 통과 가능
+    "noEmit": true // ts만 검사용. tsup이 출력 담당
+  },
+  "include": ["src"]
+}
