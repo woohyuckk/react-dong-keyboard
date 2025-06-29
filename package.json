@@ -23,7 +23,8 @@
     "eslint-plugin-tailwindcss": "^3.18.0",
     "prettier-plugin-tailwindcss": "^0.6.13",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
     "@types/react": "^19.1.8",
@@ -37,7 +38,6 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "prettier": "^3.6.2",
-    "tailwindscss": "^0.3.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
