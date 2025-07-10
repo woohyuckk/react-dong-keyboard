@@ -29,7 +29,6 @@ const meta: Meta<typeof Key> = {
     state: 'default'
   }
 };
-
 export default meta;
 
 type Story = StoryObj<typeof Key>;
