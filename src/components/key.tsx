@@ -68,6 +68,10 @@ const keyVariants = cva(
   }
 );
 
+/**
+ * pressed 상태를 관리하려면 2가지 방식이 있다. 누르자마자 키에서 관리를 할 것인지 외부에서 상태로 정의하고 전달하여 관리하는 방식인지 고민해 보면 좋을 것 같습니다.
+ */
+
 type KeyProps = VariantProps<typeof keyVariants> & {
   children: React.ReactNode;
   className?: string;
@@ -77,6 +81,11 @@ type KeyProps = VariantProps<typeof keyVariants> & {
 const Key = forwardRef<HTMLElement, KeyProps>(
   ({ children, size, design, state, className, asChild = false, ...props }, ref) => {
     const Comp = asChild ? 'span' : 'kbd';
+
+    /* asChild를 사용하고 있지만 children이 text로 제한되어 있음 이는 asChild의 속성을 잘못 사용하고 있다.
+      asChild는 상위 컴포넌트에 전달한 props를 자식 컴포넌트에 전달하기 위한 속성이다. asChild는 기본이 false 이므로 false를 default 값으로 사용하지 않는다.
+    */
+
 
     return (
       <Comp ref={ref} className={cn(keyVariants({ size, design, state }), className)} {...props}>
